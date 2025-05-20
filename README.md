@@ -3,6 +3,7 @@
 
 Word Mafia is a dynamic, multiplayer game designed to provide a thrilling experience by combining elements of strategy, social deduction, and word-guessing.  Developed using React and Material UI for a polished frontend experience, and Python for robust server-side game logic, this project highlights a scalable, serverless architecture leveraging various AWS services for seamless real-time multiplayer interactions.
 
+This document outlines the technical architecture, including data structures, APIs, AWS roles, high-level game logic, and design considerations.
 
 ## Why I Made It
 
