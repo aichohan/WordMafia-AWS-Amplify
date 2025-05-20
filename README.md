@@ -39,18 +39,47 @@ The game leverages a comprehensive set of AWS services for gameplay management, 
 - **Amazon Cognito**: Manages user authentication and authorization, integrating seamlessly with the frontend for secure access control.
 - **Amazon S3**: Hosts the game's deployment files and assets, with CloudFront delivering this content efficiently across the globe.
 
+![Image](https://github.com/user-attachments/assets/e2c9332a-386e-4302-8148-f6ff87248895)
+![Image](https://github.com/user-attachments/assets/41319c32-9c31-44f1-a753-655053e7f101)
 
-## Game Rules and Mechanics
+### **Design Considerations**
 
-- **Creating a Lobby**: Any player can create a new game lobby, which generates a unique ID for others to join.
-- **Joining a Game**: Using the game ID, players can enter an existing lobby to participate.
-- **Roles Assignment**: Upon starting the game, players are secretly assigned roles:
-  - **Mafia**: Knows the word and tries to mislead others.
-  - **Civilian**: Does not know the word and must guess it based on clues provided by others.
-- **Gameplay**:
-  - The game progresses in rounds where players discuss and provide clues to guess the word.
-  - The Mafia's goal is to remain undetected and lead civilians away from the correct word.
-  - Civilians aim to identify the Mafia while guessing the word correctly.
+-   **Scalability**: Serverless architecture with AWS Lambda and DynamoDB scales automatically to accommodate varying numbers of concurrent game sessions.
+-   **Security**: Use of Amazon Cognito for user authentication helps secure access. IAM roles and policies are defined to enforce least privilege access to AWS resources.
+-   **Cost-Efficiency**: Serverless services incur costs based on usage, ensuring cost-efficiency for varying load patterns.
+-   **User Experience**: Real-time updates via WebSockets ensure a dynamic and engaging user experience.
+-   **Maintainability**: Modular architecture and clear separation of concerns between frontend and backend logic facilitate easier maintenance and updates.
+
+### **Roles and Setup:**
+
+-   **Roles**: Players are randomly assigned one of two roles - Civilian or Mafia.
+-   **Mafia Count**: The number of Mafia players is predetermined based on the party size. Typically, there is 1 Mafia for smaller groups, but for parties of 10 or more, 2 Mafias are recommended.
+
+### **Gameplay:**
+
+1.  **Word Reveal:** At the game's start, a word is displayed to all players. Civilians see a specific word (e.g., "ball"), while Mafia players see "MAFIA" on their screens, indicating their role.
+2.  **Objective**:
+
+-   **Civilians** aim to covertly signal their knowledge of the word to other Civilians while being vague enough to prevent the Mafia from catching on.
+-   **Mafia** must blend in with Civilians, pretending to know the word and giving plausible synonyms or related terms without actual knowledge of the word. This is a total educated guess based on context clues.
+
+1.  **Turns**: A player is randomly chosen to start, with the direction of play (left or right) also determined randomly. Players then take turns providing their word or clue.
+2.  **Discussion and Voting**: After everyone has spoken, a discussion phase allows players to debate who they suspect is the Mafia. A vote follows, aiming to eliminate the suspected Mafia player.
+3.  **Elimination and Victory Conditions:**
+
+-   If the Mafia is correctly identified and voted out, Civilians win. However, the ousted Mafia player has a final chance to win by correctly guessing the original word.
+-   If the Mafia is not correctly voted out, the game proceeds to the next round without the incorrectly accused player. The same Mafia player(s) continue, but a new word is chosen.
+-   The Mafia wins by remaining undetected for three consecutive rounds or by correctly guessing the word at any point.
+
+### **Joining and Starting a Game:**
+
+-   **Joining a Party**: To join an existing party, players enter a unique code provided by the host. This seamlessly integrates them into an existing game lobby.
+-   **Creating a Party**: Hosts input their name and select the desired number of Mafia players. A unique party code is generated for others to join..
+-   **Starting the Game**: As participants join, the screen displays each player's name along with the total number of players in the game, ensuring everyone is accounted for before starting. The host initiates the game once all players have joined, setting the stage for an engaging round of Word Mafia.
+
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/8d239fc8-543b-46d9-99b8-cdee60b638e7" alt="Image">
+</p>
 
 ## Setup Instructions
 
