@@ -81,6 +81,42 @@ The game leverages a comprehensive set of AWS services for gameplay management, 
   <img src="https://github.com/user-attachments/assets/8d239fc8-543b-46d9-99b8-cdee60b638e7" alt="Image">
 </p>
 
+## Gameplay Screenshots
+User Management powered by AWS Congnito
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/34b1193b-149f-4d2b-92be-099b21a11b29" width="50%" alt="Image">
+</p>
+
+## Lobby / Game Generation 
+*note that only the host can start the game
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/e82b71b1-d6b1-4a7d-94ee-71a8cb09661e" width="45%" alt="Image 1">
+  <img src="https://github.com/user-attachments/assets/647a782d-4607-4c8a-a4c3-aeba71d18152" width="45%" alt="Image 2">
+</div>
+
+## Joining the lobby as a player
+using the game code generated
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/870a3d9e-d0ff-4144-8f53-9a11a191bd4c" width="45%" alt="Image 1">
+  <img src="https://github.com/user-attachments/assets/93ccb886-523a-4b61-a556-25bc369bc03f" width="45%" alt="Image 2">
+</div>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/70de4a8a-d8de-4526-ad41-adeaced7dd57" width="45%" alt="Image 1">
+  <img src="https://github.com/user-attachments/assets/1afe6892-39b9-41ba-9936-27a80bc0bd5d" width="45%" alt="Image 2">
+</div>
+
+## Starting the game
+System auto picks a word and mafia, in this case Jeff Bezos is the mafia, who does not get the word reveled to him 
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/be093371-a007-44eb-9f50-ec4c7d0af1b2" width="45%" alt="Image 1">
+  <img src="https://github.com/user-attachments/assets/fdcd4d79-2673-4ef5-be32-a614d22a1d32" width="45%" alt="Image 2">
+</div>
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/53264517-18f1-49a1-b5ae-4a89d4cc4321" width="45%" alt="Image 1">
+  <img src="https://github.com/user-attachments/assets/2df45f4a-6d2c-4247-83cb-8734a0676860" width="45%" alt="Image 2">
+</div>
+
 ## Setup Instructions
 
 ### Prerequisites
