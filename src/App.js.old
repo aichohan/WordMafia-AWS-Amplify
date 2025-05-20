@@ -1,0 +1,48 @@
+import React from 'react';
+import './App.css';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import { API } from 'aws-amplify';
+import GameLobby from './components/gameLobby'; // Ensure this path is correct
+
+function App() {
+    const createGameSession = async () => {
+        try {
+            // Use the API name from your aws-exports.js
+            const response = await API.post('mafiaconnector', '/createGameSession', {
+                body: {}
+            });
+            const data = await response.json();
+            console.log('Game created:', data.gameId);
+            alert(`Game created successfully! Game ID: ${data.gameId}`);
+        } catch (err) {
+            console.error('Error creating game session:', err);
+            alert('Failed to create game session.');
+        }
+    };
+
+    const joinGameSession = async (gameId, playerName) => {
+        try {
+            // Use the API name from your aws-exports.js
+            const response = await API.post('mafiaconnector', '/joinGameSession', {
+                body: { gameId, playerName }
+            });
+            const data = await response.json();
+            console.log('Joined game successfully:', data);
+            alert('Joined game successfully!');
+        } catch (err) {
+            console.error('Error joining game session:', err);
+            alert('Failed to join game session.');
+        }
+    };
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Word Mafia Game</h1>
+                <GameLobby onCreateGame={createGameSession} onJoinGame={joinGameSession} />
+            </header>
+        </div>
+    );
+}
+
+export default withAuthenticator(App);

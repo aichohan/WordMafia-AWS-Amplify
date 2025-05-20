@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "paths": {
+    "/SetupGameLobby": {
+      "name": "/SetupGameLobby",
+      "lambdaFunction": "SetupGameLobby",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/startGameSession": {
+      "name": "/startGameSession",
+      "lambdaFunction": "startGameSession",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/getGameDetails/{gameId}": {
+      "name": "/getGameDetails/{gameId}",
+      "lambdaFunction": "GameDetails",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/joinGameSession": {
+      "name": "/joinGameSession",
+      "lambdaFunction": "joinGameSession",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

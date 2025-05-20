@@ -1,0 +1,47 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wordmafiagame-dev-00507-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637186287457:role/amplify-wordmafiagame-dev-00507-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637186287457:role/amplify-wordmafiagame-dev-00507-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wordmafiagame-dev-00507-deployment",
+      "UnauthRoleName": "amplify-wordmafiagame-dev-00507-unauthRole",
+      "StackName": "amplify-wordmafiagame-dev-00507",
+      "StackId": "arn:aws:cloudformation:us-east-1:637186287457:stack/amplify-wordmafiagame-dev-00507/f1ae09d0-d5f6-11ee-be12-0ecc6f7aa751",
+      "AmplifyAppId": "d2hyjsesw62xtw"
+    },
+    "categories": {
+      "auth": {
+        "wordmafiagame1e0b919d": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2hyjsesw62xtw",
+          "type": "manual"
+        }
+      },
+      "function": {
+        "SetupGameLobby": {
+          "deploymentBucketName": "amplify-wordmafiagame-dev-00507-deployment",
+          "s3Key": "amplify-builds/SetupGameLobby-5a636f376531724e474d-build.zip"
+        },
+        "joinGameSession": {
+          "deploymentBucketName": "amplify-wordmafiagame-dev-00507-deployment",
+          "s3Key": "amplify-builds/joinGameSession-45632b354b3179364f5a-build.zip"
+        },
+        "startGameSession": {
+          "deploymentBucketName": "amplify-wordmafiagame-dev-00507-deployment",
+          "s3Key": "amplify-builds/startGameSession-595332734a794c363536-build.zip"
+        },
+        "GameDetails": {
+          "deploymentBucketName": "amplify-wordmafiagame-dev-00507-deployment",
+          "s3Key": "amplify-builds/GameDetails-2f44456d367270317357-build.zip"
+        }
+      },
+      "api": {
+        "mafiaconnector": {}
+      }
+    }
+  }
+}
