@@ -185,7 +185,7 @@ Review section on data models for more details.
 1. Clone the repository and navigate into it:
 
    ```bash
-   git clone https://github.com/yourGitHub/WordMafia-Amplify-React.git
+   git clone https://github.com/aichohan/WordMafia-AWS-Amplify.git
    cd WordMafia-Amplify-React
    ```
 
