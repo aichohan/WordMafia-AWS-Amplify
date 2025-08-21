@@ -9,7 +9,7 @@ function Lobby({ playerName, gameId, isHost, gameStarted }) {
 
   const fetchPlayers = useCallback(async () => {
     try {
-      const response = await fetch(`https://qq4vbcrtkf.execute-api.us-east-1.amazonaws.com/dev/getGameDetails/${gameId}`);
+      const response = await fetch(`https://[YOUR_API].us-east-1.amazonaws.com/dev/getGameDetails/${gameId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch players');
       }
