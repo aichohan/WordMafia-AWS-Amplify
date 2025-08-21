@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Lobby from './Lobby'; // Ensure Lobby.js is updated as previously described
+import Lobby from './Lobby'; 
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import { CssBaseline, Container, Typography, Button, TextField, Alert } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -85,7 +85,7 @@ function App() {
 
   const startGame = async () => {
     try {
-      const response = await fetch('https://qq4vbcrtkf.execute-api.us-east-1.amazonaws.com/dev/startGameSession', {
+      const response = await fetch('https://[YOUR-API]-api.us-east-1.amazonaws.com/dev/startGameSession', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ gameId }),
